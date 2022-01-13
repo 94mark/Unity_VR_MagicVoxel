@@ -4,11 +4,30 @@ using UnityEngine;
 
 //사용자가 마우스를 클릭한 지점에 복셀을 1개 만들고 싶다
 //필요 속성 : 복셀 공장
+//오브젝트 풀에 비활성화된 복셀을 담고 싶다
+//필요 속성 : 오브젝트 풀, 오브젝트 풀의 크기
 public class VoxelMaker : MonoBehaviour
 {
     //복셀 공장
     public GameObject voxelFactory;
+    //오브젝트 풀의 크기
+    public int voxelPoolSize = 20;
+    //오브젝트 풀
+    public static List<GameObject> voxelPool = new List<GameObject>();
 
+    void Start()
+    {
+        //오브젝트 풀에 비활성화된 복셀을 담고 싶다
+        for(int i = 0; i < voxelPoolSize; i++)
+        {
+            //1.복셀 공장에서 복셀 생성하기
+            GameObject voxel = Instantiate(voxelFactory);
+            //2. 복셀 비활성화하기
+            voxel.SetActive(false);
+            //3. 복셀을 오브젝트 풀에 담고 싶다
+            voxelPool.Add(voxel);
+        }
+    }
     void Update()
     {
         //사용자가 마우스를 클릭한 지점에 복셀을 1개 만들고 싶다
