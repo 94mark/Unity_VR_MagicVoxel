@@ -39,10 +39,19 @@ public class VoxelMaker : MonoBehaviour
             //2. 마우스의 위치가 바닥 위에 위치해 있다면
             if (Physics.Raycast(ray, out hitInfo))
             {
-                //3. 복셀 공장에서 복셀을 만들어야 한다
-                GameObject voxel = Instantiate(voxelFactory);
-                //4. 복셀을 배치하고 싶다
-                voxel.transform.position = hitInfo.point;
+                //복셀 오브젝트 풀 이용하기
+                //1. 만약 오브젝트 풀에 복셀이 있다면
+                if(voxelPool.Count > 0)
+                {
+                    //2. 오브젝트 풀에서 복셀을 하나 가져온다
+                    GameObject voxel = voxelPool[0];
+                    //3. 복셀을 활성화한다
+                    voxel.SetActive(true);
+                    //4. 복셀을 배치하고 싶다
+                    voxel.transform.position = hitInfo.point;
+                    //5. 오브젝트 풀에서 복셀을 제거한다
+                    voxelPool.RemoveAt(0);
+                }
             }
         }
     }
