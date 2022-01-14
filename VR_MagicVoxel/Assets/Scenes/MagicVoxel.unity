@@ -525,6 +525,7 @@ MonoBehaviour:
   voxelFactory: {fileID: 5757331676197901334, guid: 00641cf5f13309843bf21e9077f9bce7, type: 3}
   voxelPoolSize: 20
   createTime: 0.1
+  crosshair: {fileID: 823187013}
 --- !u!1 &1848568473
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: d59108bfd9dbe5848b65f94ae925c81b, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
