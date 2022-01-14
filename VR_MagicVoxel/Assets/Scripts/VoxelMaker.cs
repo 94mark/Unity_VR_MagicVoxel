@@ -2,11 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//사용자가 마우스를 클릭한 지점에 복셀을 1개 만들고 싶다
-//필요 속성 : 복셀 공장
-//오브젝트 풀에 비활성화된 복셀을 담고 싶다
-//필요 속성 : 오브젝트 풀, 오브젝트 풀의 크기
-//VR컨트롤러의 발사 버튼을 누르면 컨트롤러가 향하는 방향으로 복셀을 생성
 public class VoxelMaker : MonoBehaviour
 {
     //복셀 공장
@@ -19,6 +14,8 @@ public class VoxelMaker : MonoBehaviour
     public float createTime = 0.1f;
     //경과 시간
     float currentTime = 0;
+    //크로스헤어 변수
+    public Transform crosshair;
 
     void Start()
     {
@@ -36,6 +33,8 @@ public class VoxelMaker : MonoBehaviour
 
     void Update()
     {
+        //크로스헤어 그리기
+        ARAVRInput.DrawCrosshair(crosshair);
         //VR 컨트롤러의 발사 버튼을 누르면
         if(ARAVRInput.Get(ARAVRInput.Button.One))
         {
