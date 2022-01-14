@@ -47,7 +47,7 @@ public class VoxelMaker : MonoBehaviour
             {
                 //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 //2) 컨트롤러가 향하는 방향으로 시선 만들기
-                Ray ray = new Ray(ARAVRInput.RHandPositon, ARAVRInput.RHandDirection);
+                Ray ray = new Ray(ARAVRInput.RHandPosition, ARAVRInput.RHandDirection);
                 RaycastHit hitInfo = new RaycastHit();
                 //3. Ray를 쏜다
                 if (Physics.Raycast(ray, out hitInfo))
