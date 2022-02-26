@@ -46,4 +46,5 @@ VR Magic Voxel 제작
 			- UI가 월드 공간에 배치되기 때문에 Depth Testing 과정에서 일종의 Z-Fighting 현상이 발생하는 것(카메라 시점을 기준으로 오브젝트와의 간격이 더 짧은 객체를 먼저 보여주기 때문)
 			- Crosshair 이미지가 어떤 다른 객체들과 겹치더라도 가장 우선순위로 위에 나타나야 함(목표 설정)
 			- 유니티 Built-in Shader/UI-Defualt.shader 파일을 Crosshair Shader로 연결, SubShader 하위의 ZTest 속성을 Always로 변경, Crosshair Material에 매핑하여 문제 해결
-			- ZTest는 오브젝트가 그려질 때 ZBuffer의 해당 픽셀에 이미 기록된 깊이 값과 자신의 깊이 값을 비교하여, 자신의 픽셀을 렌더링할지 여부를 결정하는 연산, Always 속성은 오브젝트 간 깊이값을 판단하지 않고 무조건 맨 앞에 렌더링하는 특징이 있음.
+			- ZTest는 오브젝트가 그려질 때 ZBuffer의 해당 픽셀에 이미 기록된 깊이 값과 자신의 깊이 값을 비교하여, 자신의 픽셀을 렌더링할지 여부를 결정하는 연산
+			- Always 속성은 오브젝트 간 깊이값을 판단하지 않고 무조건 맨 앞에 렌더링하는 특징이 있음.
