@@ -1,4 +1,6 @@
 # VR Magic Voxel 제작
+![imge3](https://user-images.githubusercontent.com/90877724/156960386-cc64d333-1fe2-4754-be8f-e3b569f06709.png)
+
 ## 1. 프로젝트 개요
 ### 1.1 개발 인원/기간 및 포지션
 - 1인, 총 3일 소요
