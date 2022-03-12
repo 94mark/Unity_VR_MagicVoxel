@@ -33,7 +33,7 @@
 ## 4. 문제 해결 내용
 ### 4.1 오브젝트 풀링 
 - VR 환경에 적합한 FPS(Frame Per Second, 초당 프레임률)를 향상시켜 인지 부조화 방지를 목표
-- voxelPoolSize가 20인 voxelPool 리스트를 추가해 비활성화돼 있는 복셀을 담아 관리(for문을 돌려 voxelFactory에서 voxelPoolSize만큼의 voxel을 생성 후 비활성화하여 voxelPool에 Add)
+- voxelPoolSize가 20인 voxelPool 리스트를 추가해 비활성화돼 있는 복셀을 담아 관리
 - voxelPool.Count를 통해 오브젝트 풀에 복셀이 있다면 voxelPool[0]을 가져와 활성화하고, voxel.transfrom.position을 hitInfo.point에 입력 후 오브젝트 풀에서 RemoveAt(0) 함.
 - 생성된 복셀이 일정 시간을 초과하면 다시 비활성화시킨 후 voxelPool에 반환
 - voxel의 Rigidbody와 관련하여 랜덤한 속도 지정에 대한처리를 위해 Start()를 OnEnable()로 변경
